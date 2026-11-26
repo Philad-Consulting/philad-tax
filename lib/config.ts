@@ -10,3 +10,6 @@ export const API_BASE_URL = (process.env.NEXT_PUBLIC_API_BASE_URL ?? "").replace
 export const CANADA_SITE_URL = "https://www.philadconsulting.com";
 
 export const CONTACT_EMAIL = "info@philadtax.com";
+
+/** Where clients start filing their return (Taxes To Go), from Deji */
+export const FILE_TAXES_URL = "https://taxestogo.com/App/Download/73934";

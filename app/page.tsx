@@ -1,5 +1,6 @@
 import { ContactSection } from "@/components/contact-section";
 import { FaqSection } from "@/components/faq-section";
+import { FileTaxesSection } from "@/components/file-taxes-section";
 import { HeroSection } from "@/components/hero-section";
 import { ProcessSection } from "@/components/process-section";
 import { ServicesSection } from "@/components/services-section";
@@ -26,6 +27,7 @@ export default function HomePage() {
         <ProcessSection />
         <FaqSection />
         <ContactSection />
+        <FileTaxesSection />
       </main>
       <SiteFooter />
     </>

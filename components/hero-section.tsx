@@ -1,6 +1,7 @@
-import { ArrowRight, Check, Landmark } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, FileText, Landmark } from "lucide-react";
 
-import { HERO } from "@/lib/content";
+import { FILE_TAXES_URL } from "@/lib/config";
+import { FILE_TAXES, HERO } from "@/lib/content";
 
 import { Reveal } from "./reveal";
 
@@ -15,8 +16,8 @@ export function HeroSection() {
           plain navy so it runs on seamlessly behind the trust strip. */}
       <div aria-hidden className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.05)_1px,transparent_1px)] mask-[radial-gradient(ellipse_70%_60%_at_50%_0%,black,transparent)] bg-size-[56px_56px]" />
-        <div className="bg-secondary-500/20 absolute -top-40 right-[-10%] size-[36rem] rounded-full blur-3xl" />
-        <div className="bg-primary-600/35 absolute top-1/4 left-[-15%] size-[34rem] rounded-full blur-3xl" />
+        <div className="bg-secondary-500/20 absolute -top-40 right-[-10%] size-144 rounded-full blur-3xl" />
+        <div className="bg-primary-600/35 absolute top-1/4 left-[-15%] size-136 rounded-full blur-3xl" />
       </div>
 
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:px-8">
@@ -59,6 +60,26 @@ export function HeroSection() {
               className="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/5"
             >
               Explore our services
+            </a>
+          </Reveal>
+          <Reveal delay={0.3} className="mt-6 max-w-xl">
+            <a
+              href={FILE_TAXES_URL}
+              target="_blank"
+              rel="noopener"
+              className="group hover:border-secondary-400/60 flex items-center gap-4 rounded-2xl border border-white/15 bg-white/5 p-4 backdrop-blur transition-colors hover:bg-white/10 sm:p-5"
+            >
+              <span className="bg-secondary-500 text-primary-900 grid size-12 shrink-0 place-items-center rounded-xl">
+                <FileText className="size-6" aria-hidden />
+              </span>
+              <span className="flex-1">
+                <span className="block text-lg font-semibold text-white">{FILE_TAXES.label}</span>
+                <span className="text-primary-100/70 block text-sm">{FILE_TAXES.note}</span>
+              </span>
+              <ArrowUpRight
+                className="text-secondary-400 size-6 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                aria-hidden
+              />
             </a>
           </Reveal>
         </div>

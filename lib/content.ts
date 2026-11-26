@@ -168,6 +168,15 @@ export const CONTACT = {
   formTitle: "Request a consultation",
 };
 
+/** The online filing link (Taxes To Go), in the hero and the closing section */
+export const FILE_TAXES = {
+  label: "Click to file your tax now",
+  note: "Opens Taxes To Go in a new tab",
+  eyebrow: "File online",
+  title: "Ready to file your U.S. taxes?",
+  body: "Start your return online with Taxes To Go. Prefer to talk it through first? Email our team and we'll help you get started.",
+};
+
 export const FOOTER = {
   tagline: "U.S. federal & state tax preparation, bookkeeping and advisory.",
   disclaimer:
