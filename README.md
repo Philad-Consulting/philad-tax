@@ -19,8 +19,9 @@ pnpm dev                     # http://localhost:3200
 ## Leads
 
 The contact form posts to `POST <NEXT_PUBLIC_API_BASE_URL>/contact` on the Philad API
-(`philad-backend`) with `source: "us-site"`. Leads show in the Philad admin console under
-**Contact Leads** as "U.S. site". The API rejects unknown fields, so the payload
+(`philad-backend`) with `source: "us-site"`. The API emails each lead to the U.S. inbox
+(`US_CONTACT_INBOX`, <info@philadtax.com>); it doesn't store them or show them in Philad
+Consulting's admin console. The API rejects unknown fields, so the payload
 (`lib/lead.ts`) must match its `CreateContactDto`.
 
 The API's `CORS_ORIGINS` must include `https://philadtax.com` and `https://www.philadtax.com`.
