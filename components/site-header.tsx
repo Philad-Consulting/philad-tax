@@ -8,6 +8,7 @@ import { NAV_LINKS } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
 import { Brand } from "./brand";
+import { UsFlag } from "./us-flag";
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -73,7 +74,7 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 sm:gap-3">
           <a
             href="#contact"
             className="bg-secondary-500 text-primary-900 hover:bg-secondary-400 hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold shadow-sm transition-colors sm:inline-flex"
@@ -81,6 +82,15 @@ export function SiteHeader() {
             Get started
             <ArrowRight className="size-4" aria-hidden />
           </a>
+          <span
+            title="Serving clients across the United States"
+            className={cn(
+              "grid place-items-center rounded-xs p-0.5 transition-colors",
+              solid ? "bg-white ring-1 ring-slate-200" : "",
+            )}
+          >
+            <UsFlag className="h-7 w-9 rounded-xs" />
+          </span>
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
