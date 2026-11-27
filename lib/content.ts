@@ -174,7 +174,7 @@ export const FILE_TAXES = {
   note: "Opens Taxes To Go in a new tab",
   eyebrow: "File online",
   title: "Ready to file your U.S. taxes?",
-  body: "Start your return online with Taxes To Go. Prefer to talk it through first? Email our team and we'll help you get started.",
+  body: "Start your return online with Taxes To Go.",
 };
 
 export const FOOTER = {

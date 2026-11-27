@@ -5,7 +5,7 @@ import { FILE_TAXES } from "@/lib/content";
 
 import { Reveal } from "./reveal";
 
-/** Closing call to action before the footer: file online, or email the team first */
+/** Closing call to action before the footer: file online */
 export function FileTaxesSection() {
   return (
     <section aria-labelledby="file-taxes-title" className="bg-white py-20 sm:py-24">
