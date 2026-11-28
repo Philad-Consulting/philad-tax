@@ -2,7 +2,7 @@
   "name": "philad-tax",
   "version": "0.1.0",
   "private": true,
-  "description": "Philad Tax Advisors: the U.S. site for Philad Consulting Inc.",
+  "description": "Philad U.S. Tax Advisors: the U.S. site for Philad Consulting Inc.",
   "packageManager": "pnpm@10.19.0",
   "engines": {
     "node": ">=22"

@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
+import { SITE_NAME } from "@/lib/config";
 import { NAV_LINKS } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
@@ -50,15 +52,15 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
-        <a href="#top" aria-label="Philad Tax Advisors, back to top" className="rounded-xl">
+        <Link href="/#top" aria-label={`${SITE_NAME}, home`} className="rounded-xl">
           <Brand tone={solid ? "dark" : "light"} />
-        </a>
+        </Link>
 
         <nav aria-label="Main" className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   className={cn(
                     "rounded-full px-4 py-2 text-[0.95rem] font-medium transition-colors",
@@ -68,20 +70,20 @@ export function SiteHeader() {
                   )}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="bg-secondary-500 text-primary-900 hover:bg-secondary-400 hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold shadow-sm transition-colors sm:inline-flex"
           >
             Get started
             <ArrowRight className="size-4" aria-hidden />
-          </a>
+          </Link>
           <span
             title="Serving clients across the United States"
             className={cn(
@@ -121,24 +123,24 @@ export function SiteHeader() {
             <ul className="mx-auto max-w-7xl space-y-1 px-4 py-4 sm:px-6">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
                     className="text-primary-900 block rounded-lg px-3 py-3 text-base font-medium hover:bg-slate-50"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li className="pt-2">
-                <a
-                  href="#contact"
+                <Link
+                  href="/#contact"
                   onClick={() => setMenuOpen(false)}
                   className="bg-secondary-500 text-primary-900 hover:bg-secondary-400 flex items-center justify-center gap-2 rounded-full px-5 py-3 font-semibold"
                 >
                   Request a consultation
                   <ArrowRight className="size-4" aria-hidden />
-                </a>
+                </Link>
               </li>
             </ul>
           </motion.nav>

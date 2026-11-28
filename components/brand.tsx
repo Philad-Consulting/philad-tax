@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
-/** Logo mark plus the "Philad Tax Advisors" wordmark */
+/** Logo mark plus the "Philad U.S. Tax Advisors" wordmark */
 export function Brand({
   tone = "dark",
   className,
@@ -22,7 +22,7 @@ export function Brand({
             tone === "light" ? "text-white" : "text-primary-900",
           )}
         >
-          Philad Tax
+          Philad U.S. Tax
         </span>
         <span
           className={cn(

@@ -1,19 +1,20 @@
 /**
- * Site copy, from the client's Philad Tax Advisors content. Edit wording here only.
+ * Site copy, from the client's Philad U.S. Tax Advisors content. Edit wording here only.
  */
 
+/** Links go through the home page so they also work from the policy pages */
 export const NAV_LINKS = [
-  { href: "#services", label: "Services" },
-  { href: "#why-philad", label: "Why Philad" },
-  { href: "#process", label: "Our Process" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#services", label: "Services" },
+  { href: "/#why-philad", label: "Why Philad" },
+  { href: "/#process", label: "Our Process" },
+  { href: "/#faq", label: "FAQ" },
 ] as const;
 
 export const HERO = {
   eyebrow: "Your partner in U.S. tax & accounting",
   title: "Tax Filing Made Simple.",
   highlight: "Business Finances Made Smarter.",
-  body: "From individual IRS returns to LLCs, S corporations, C corporations and partnerships, Philad Tax Advisors helps you file with confidence, maintain accurate books and make informed financial decisions.",
+  body: "From individual IRS returns to LLCs, S corporations, C corporations and partnerships, Philad U.S. Tax Advisors helps you file with confidence, maintain accurate books and make informed financial decisions.",
   panelTitle: "One firm. Complete support.",
   panelItems: [
     "Individual & nonresident tax returns",
@@ -181,4 +182,6 @@ export const FOOTER = {
   tagline: "U.S. federal & state tax preparation, bookkeeping and advisory.",
   disclaimer:
     "Tax outcomes depend on individual facts and applicable law. Engagement is subject to acceptance and agreed scope.",
+  ctec: "CTEC Registered Tax Preparer (CRTP) #A365050 — Registered with the California Tax Education Council (CTEC) to prepare California and federal income tax returns.",
+  ctecLink: "Verify a California tax preparer at ctec.org",
 };

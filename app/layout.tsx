@@ -3,7 +3,7 @@ import { Source_Sans_3, Source_Serif_4 } from "next/font/google";
 
 import { MotionProvider } from "@/components/motion-provider";
 import { HERO, SERVICES } from "@/lib/content";
-import { CONTACT_EMAIL, SITE_NAME, SITE_URL } from "@/lib/config";
+import { ADDRESS, CONTACT_EMAIL, SITE_NAME, SITE_URL } from "@/lib/config";
 
 import "./globals.css";
 
@@ -64,6 +64,12 @@ const structuredData = {
   name: SITE_NAME,
   url: SITE_URL,
   email: CONTACT_EMAIL,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: ADDRESS.locality,
+    addressRegion: ADDRESS.region,
+    addressCountry: "US",
+  },
   description: HERO.body,
   areaServed: { "@type": "Country", name: "United States" },
   parentOrganization: { "@type": "Organization", name: "Philad Consulting Inc." },
